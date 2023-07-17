@@ -23,7 +23,7 @@ echo "修改登陆密码"
 sed -i 's/DEF_ROOT_PASSWORD	"admin"/DEF_ROOT_PASSWORD	"'$user_password'"/g' $default_file
 
 echo "修改 LAN IP 地址"
-sed -i "s/192.168.8/$lan_ip/g" $default_file
+sed -i "s/192.168.2/$lan_ip/g" $default_file
 
 echo "修改 2G 无线名称"
 sed -i 's/DEF_WLAN_2G_SSID	BOARD_PID "_%s"/DEF_WLAN_2G_SSID	"'$wlan_2g_ssid'"/g' $default_file
