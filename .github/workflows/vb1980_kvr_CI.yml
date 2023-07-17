@@ -75,7 +75,7 @@ jobs:
           echo "CONFIG_FIRMWARE_INCLUDE_NPC=n" >> $m.config #npc
           ##广告管理##
           echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> $m.config #adbyby plus+
-          echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> $m.config #KP广告过滤
+          echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n" >> $m.config #KP广告过滤
           ##DNS服务##
           echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> $m.config #smartdns
           echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=n" >> $m.config #smartdns二进制文件
