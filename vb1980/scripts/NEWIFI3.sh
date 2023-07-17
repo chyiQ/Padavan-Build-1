@@ -7,9 +7,18 @@
 lan_ip="192.168.8"                          # LAN 地址 别写后面的 .1
 default_path="./user/shared"                # 默认配置路径
 config="./configs/templates/NEWIFI3.config"     # 默认配置文件
+scripts_path="./user/scripts"                # 改磁盘大小路径
+kernel_path="./configs/boards/NEWIFI3/kernel-3.4.x.config"                # 改磁盘大小路径
+
+sed -i "s/CONFIG_MTD_STORE_PART_SIZ=0x200000/CONFIG_MTD_STORE_PART_SIZ=0x600000/g" $kernel_path
+
+sed -i 's/size_etc="6M"/size_etc="18M"/g' $scripts_path/dev_init.sh
+sed -i "s/mtd_part_size=65536/mtd_part_size=6291456/g" $scripts_path/mtd_storage.sh
 
 echo "修改 LAN IP 地址"
 sed -i "s/192.168.2/$lan_ip/g" $default_path/defaults.h
+
+
 
 #echo "设置为PPPOE模式并写入账号和密码"
 #sed -i 's/{ "wan_proto", "dhcp" }/{ "wan_proto", "pppoe" }/g' $default_path/defaults.c
