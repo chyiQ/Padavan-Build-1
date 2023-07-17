@@ -41,6 +41,9 @@ sed -i "s/192.168.2/$lan_ip/g" $default_path/defaults.h
 #echo "集成 KMS 激活服务器"
 #sed -i "s/CONFIG_FIRMWARE_INCLUDE_VLMCSD=n/CONFIG_FIRMWARE_INCLUDE_VLMCSD=y/g" $config
 
+
+sed -i "s/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g" $config #OPENSSL
+
 sed -i "s/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y/g" $config  #KP广告过滤
 
 
