@@ -32,3 +32,10 @@ sed -i "s/192.168.2/$lan_ip/g" $default_path/defaults.h
 #echo "集成 KMS 激活服务器"
 #sed -i "s/CONFIG_FIRMWARE_INCLUDE_VLMCSD=n/CONFIG_FIRMWARE_INCLUDE_VLMCSD=y/g" $config
 
+sed -i "s/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y/g" $config  #KP广告过滤
+
+
+sed -i "s/CONFIG_FIRMWARE_INCLUDE_WYY=n/CONFIG_FIRMWARE_INCLUDE_WYY=y/g" $config #网易云解锁
+sed -i "s/CONFIG_FIRMWARE_INCLUDE_WYYBIN=n/CONFIG_FIRMWARE_INCLUDE_WYYBIN=y/g" $config #网易云解锁GO版本执行文件（2M多）注意固件超大小
+
+sed -i "s/CONFIG_FIRMWARE_INCLUDE_OPENSSH=n/CONFIG_FIRMWARE_INCLUDE_OPENSSH=y/g" $config
